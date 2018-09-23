@@ -1,0 +1,202 @@
+/*start main rulz*/
+body{
+    background-color: #f4f4f4;
+}
+/*end main rulz*/
+
+/*start login form*/
+.login{
+    max-width: 400px;
+    margin: 100px auto;
+    
+}
+.login h4{
+    color: #888;
+}
+.login input{
+    margin-bottom: 10px;
+}
+.login .form-control{
+    background-color: #e5e5e5;
+}
+.login .btn{
+    background-color:#008dde;
+}
+/*end login form*/
+/*start dashbord*/
+.home-stats .stat{
+    padding: 20px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+.home-stats .st-members i{
+    float: left;
+    font-size: 80px;
+}
+.home-stats .st-pending i{
+      float: left;
+    font-size: 80px;
+    
+}
+.home-stats .st-Items i{
+            float: left;
+    font-size: 80px;
+}
+.home-stats .st-Comments i{
+         float: left;
+    font-size: 80px;
+}
+.home-stats .stat a{
+    color: #fff;
+}
+.home-stats .stat a:hover{
+    text-decoration: none;
+}
+.home-stats .stat span{
+    display: block;
+    font-size: 50px; 
+}
+.home-stats .st-members{
+    background-color: #3498db;
+}
+
+.home-stats .st-pending{
+    background-color:#c0292b;
+}
+.home-stats .st-Items{
+    background-color:#d35400;
+}
+.home-stats .st-Comments{
+    background-color:#8e44ad; 
+}
+.latest{
+    margin-top: 30px;
+}
+.latest-users{
+    margin-bottom: 0px;
+}
+
+.latest-users li{
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.latest-users .btn-success,
+.latest-users .btn-info{
+    padding: 3px 8px;
+}
+.latest-users .btn-info{
+    margin-right: 5px;
+}
+
+
+.latest .comment-box{
+    margin:3 0 10px ;
+}
+.latest .comment-box .member-n,
+.latest .comment-box .member-c{
+ float: left;
+}
+.latest .comment-box .member-n{
+     margin-right: 20px;
+    width: 80px; 
+    text-align: center;
+    color:deepskyblue;
+    
+}
+.latest .comment-box .member-c{
+    background-color: #efefefef;
+    width: calc(100% - 100px);
+    position: relative;
+    padding: 10px;
+}
+.latest .comment-box .member-c:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -28px;
+    top: 10px;
+    width: 0;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent #EFEFEF transparent transparent;
+    border-width: 15px;
+}
+/*End dahbord*/
+/*stat members page*/
+.show-password{
+   position:  absolute;top:  6px;right: -20px;
+}
+.main-table{
+    box-shadow: 0 3px 10px #ccc;
+}
+.main-table td{
+    background-color: #FFF;
+    vertical-align: middle !important;
+}
+.main-table tr:first-child td{
+    background-color: #333 ;
+    color: #fff;
+}
+.main-table .btn{
+    padding: 3px 10px;
+}
+
+.activate{
+    margin-left: 5px;
+}
+.manage-members img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px 50px;
+}
+/*end members page*/
+.categories .cat{
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+}
+.categories .cat:hover .hidden-buttons{
+    right: 10px;
+}
+.categories{
+    padding: 0px;
+}
+.categories .cat .hidden-buttons{
+    transition: all .5s ease-in-out;
+    position: absolute;
+    top: 15px;
+    right: -120px;
+}
+ .card .ordering a{
+    color: #888;
+    text-decoration: none;
+}
+.card .ordering .active{
+    color: #f00;
+}
+.categories .cat h3{
+     margin: 0px;
+    cursor: pointer;
+}
+.categories .cat p{
+    color: grey;
+    margin-top: 6px;
+}
+
+.categories .Child-cats{
+    margin: 0 0 10px 40px;
+}
+.categories .Child-cats li:before{
+    content: "-";
+}
+.categories .Child-head{
+    margin: 10px 0 10px 40px;
+    color: aqua;
+    font-weight: bold;
+}
+.categories .Child-cats li{
+    margin-top: 6px;
+}

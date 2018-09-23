@@ -1,0 +1,8 @@
+# Prevent Directory Listing
+#Options -Indexes
+
+ErrorDocument 403 "<h1 style='color:red;font-size:bold;'>You Cannot Acceess to this page</h1>"
+
+#Deny from all
+
+#Allow from 192.

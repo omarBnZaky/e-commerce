@@ -1,0 +1,59 @@
+elseif($Reqaction =='ChngAva'){ 
+         
+               $avatar = rand(0,100000)."_".$AvatarName;
+                              $AvatarName = $_FILES['avatar']['name'];
+                           $AvatarSize = $_FILES['avatar']['size'];
+                           $AvatarTmpname = $_FILES['avatar']['tmp_name'];
+                           $AvatarType = $_FILES['avatar']['type'];
+                           
+                    //list of allowed extension
+                            $AvatarAllowedExtension= array("jpeg","jpg","png","gif");
+                    //get avatar extension
+                            $AvatarExtension = strtolower(end(explode('.',$AvatarName)));
+             $userid= isset($_GET['userid'])&& is_numeric($_GET['userid'])?intval($_GET['userid']):0;
+            
+            //select All Data Depend on this ID
+             $stmt = $con->prepare("SELECT * FROM users WHERE userid = ?");
+            
+            //excute query
+            
+             $stmt->execute(array($userid));
+            
+            //fecth the data
+            
+             $row = $stmt->fetch();
+            
+            //the row count
+            
+             $count = $stmt->rowCount();
+            
+            //if there is id in the form
+             if($stmt->rowCount()>0){
+            
+           
+
+            ?>
+            <h1 class="text-center">Change The Avatar</h1>
+              <?php echo '
+              <img src="uploads/avatars/'.$row['avatar'].'" style=" width: 300px;
+                      height: 300px;
+                      border-radius: 300px 300px;
+                      margin-left:300px;;"  alt =" " />'; ?>
+       <form class="form-horizontal" action="?do=updateAvatar" method="POST">
+             <div class="form-group">
+          
+                         <label class="col-sm-2 control-label">User Avatar</label>
+                             <div class="col-sm-10"> 
+                                <input type="file" 
+                                       name="avatar" 
+                                       class="form-control" 
+                                       required="required"/>
+                            </div>
+                        </div>
+           <div class="form-group">
+                             <div class="co-sm-offset-2 col-sm-10"> 
+                                <input type="submit" value="save" class="btn btn-primary"/>
+                            </div>
+           </div>
+</form>
+      <?php  }
